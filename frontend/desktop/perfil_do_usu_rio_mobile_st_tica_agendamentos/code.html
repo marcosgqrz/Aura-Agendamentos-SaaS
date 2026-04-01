@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#d4c3bb",
+              "surface-dim": "#dadada",
+              "outline": "#82746d",
+              "error": "#ba1a1a",
+              "primary-fixed": "#ffdbca",
+              "on-surface-variant": "#50443e",
+              "on-primary-container": "#62412e",
+              "on-tertiary-fixed-variant": "#5e402e",
+              "secondary-fixed-dim": "#c7c6c6",
+              "on-secondary-fixed-variant": "#464747",
+              "secondary": "#5e5e5f",
+              "on-background": "#1a1c1c",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#603f2d",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#ecbda4",
+              "surface-bright": "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "primary-fixed-dim": "#ecbda4",
+              "primary": "#7a5642",
+              "surface-container": "#eeeeee",
+              "tertiary-fixed-dim": "#e8bea6",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#626363",
+              "on-primary-fixed": "#2e1506",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-container-highest": "#e2e2e2",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-variant": "#e2e2e2",
+              "primary-container": "#dcae96",
+              "error-container": "#ffdad6",
+              "on-surface": "#1a1c1c",
+              "on-primary": "#ffffff",
+              "tertiary": "#785744",
+              "surface-container-low": "#f3f3f3",
+              "surface": "#f9f9f9",
+              "on-tertiary-container": "#5f422f",
+              "background": "#f9f9f9",
+              "on-tertiary-fixed": "#2c1607",
+              "tertiary-fixed": "#ffdbc8",
+              "surface-container-high": "#e8e8e8",
+              "tertiary-container": "#d8af97",
+              "secondary-fixed": "#e3e2e2",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#7a5642",
+              "secondary-container": "#e0dfdf"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .rose-gold-gradient {
+            background: linear-gradient(45deg, #7a5642 0%, #dcae96 100%);
+        }
+        .rose-gold-border {
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #7a5642, #dcae96) border-box;
+            border: 3px solid transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#f9f9f9]/80 backdrop-blur-xl fixed top-0 w-full z-50 flex items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#7a5642] cursor-pointer active:scale-95 duration-200" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-['Epilogue'] font-bold tracking-tight text-lg text-[#7a5642]">Meu Perfil</h1>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6">
+<!-- Hero Section Asymmetry -->
+<div class="relative mb-12 flex justify-center">
+<div class="relative">
+<div class="w-32 h-32 rounded-full rose-gold-border overflow-hidden shadow-[0_12px_40px_rgba(122,86,66,0.12)]">
+<img alt="Avatar do Usuário" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a confident woman in a modern clinical setting with soft warm lighting and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEW6ANQbZgQAITqd65NOVRWcWDvpHc3NkFJkHKKsiaDy8haUkrhCjlhWV3h9bnAJ5FqxFyaIP1naJFQvTECsRwLxdJ1YSj7VXiPzQIjYsGpaYXa5mARBKcLlicCeaJ0CrH_oI4QIP3R7eN9JvcaJdhjgTXoud7BOjyBkaw8YUAziT8nZBQ6oDnOEr7XDAo6yxGvDaFQk9UDp9IHSGxJZ0MslxaLO_XJn-4GnhO54EKAOM5rkOzvFBOfl4i-N6rQhK4gzyZ4a2iYZEH"/>
+</div>
+<div class="absolute bottom-0 right-0 rose-gold-gradient w-10 h-10 rounded-full flex items-center justify-center text-white border-4 border-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</div>
+</div>
+</div>
+<!-- Editorial Info Layout -->
+<div class="space-y-10">
+<!-- Header Group -->
+<div class="border-l-4 border-primary-container pl-5">
+<p class="font-label text-[11px] uppercase tracking-[0.1em] text-outline mb-1">Informações Pessoais</p>
+<h2 class="font-headline text-3xl font-bold tracking-tighter text-on-surface">Carolina M. Estevão</h2>
+</div>
+<!-- Profile Details Form-like Bento Grid -->
+<div class="grid gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_20px_rgba(122,86,66,0.04)]">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline block mb-2">E-mail Corporativo</label>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/60 text-[20px]" data-icon="mail">mail</span>
+<p class="text-on-surface font-medium">carolina.estevao@estetica.com</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline block mb-2">Cargo Atual</label>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/60 text-[20px]" data-icon="badge">badge</span>
+<p class="text-on-surface font-semibold">Administrador</p>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter">Master</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_20px_rgba(122,86,66,0.04)]">
+<label class="font-label text-[10px] uppercase tracking-widest text-outline block mb-2">Telefone de Contato</label>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/60 text-[20px]" data-icon="call">call</span>
+<p class="text-on-surface font-medium">(11) 98765-4321</p>
+</div>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="pt-6">
+<button class="w-full rose-gold-gradient text-white font-headline font-bold py-5 px-8 rounded-full shadow-[0_12px_30px_rgba(122,86,66,0.2)] active:scale-[0.98] transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="settings_heart" data-weight="fill" style="font-variation-settings: 'FILL' 1;">settings_heart</span>
+                    Editar Perfil
+                </button>
+<p class="text-center text-outline text-xs mt-6 font-medium">Membro desde Janeiro de 2024</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#ffffff]/80 backdrop-blur-xl fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe z-50 rounded-t-3xl shadow-[0_-12px_40px_rgba(122,86,66,0.06)]">
+<div class="flex flex-col items-center justify-center text-[#50443e] px-5 py-2 hover:text-[#7a5642] transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider mt-1">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50443e] px-5 py-2 hover:text-[#7a5642] transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider mt-1">Agenda</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50443e] px-5 py-2 hover:text-[#7a5642] transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider mt-1">Alertas</span>
+</div>
+<!-- Active Tab: Perfil -->
+<div class="flex flex-col items-center justify-center bg-[#dcae96] text-white rounded-full px-5 py-2 active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider mt-1">Perfil</span>
+</div>
+</nav>
+</body></html>

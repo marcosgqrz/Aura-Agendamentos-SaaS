@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stética Agendamentos - Dashboard Administrativo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed": "#e3e2e2",
+              "on-surface": "#1a1c1c",
+              "tertiary-fixed": "#ffdbc8",
+              "on-tertiary-fixed": "#2c1607",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#ffdbca",
+              "surface-bright": "#f9f9f9",
+              "secondary-container": "#e0dfdf",
+              "tertiary-fixed-dim": "#e8bea6",
+              "primary": "#7a5642",
+              "on-secondary-fixed-variant": "#464747",
+              "on-primary-fixed": "#2e1506",
+              "inverse-surface": "#2f3131",
+              "surface-container-high": "#e8e8e8",
+              "background": "#f9f9f9",
+              "on-error": "#ffffff",
+              "tertiary": "#785744",
+              "secondary-fixed-dim": "#c7c6c6",
+              "primary-container": "#dcae96",
+              "on-primary-container": "#62412e",
+              "surface-dim": "#dadada",
+              "on-background": "#1a1c1c",
+              "on-tertiary-container": "#5f422f",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-tint": "#7a5642",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e2e2e2",
+              "error": "#ba1a1a",
+              "on-secondary-container": "#626363",
+              "surface": "#f9f9f9",
+              "on-tertiary-fixed-variant": "#5e402e",
+              "outline-variant": "#d4c3bb",
+              "outline": "#82746d",
+              "secondary": "#5e5e5f",
+              "surface-container-low": "#f3f3f3",
+              "inverse-primary": "#ecbda4",
+              "primary-fixed-dim": "#ecbda4",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#d8af97",
+              "on-surface-variant": "#50443e",
+              "on-primary-fixed-variant": "#603f2d",
+              "surface-container": "#eeeeee"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .rose-gold-gradient {
+        background: linear-gradient(45deg, #7a5642 0%, #dcae96 100%);
+      }
+      .custom-shadow {
+        box-shadow: 0 12px 40px rgba(122, 86, 66, 0.06);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border-b border-stone-200/20 dark:border-stone-800/20 shadow-sm shadow-orange-900/5">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-100 hover:opacity-80 transition-opacity cursor-pointer">menu</span>
+<div class="flex items-baseline gap-2">
+<span class="text-xl font-bold text-stone-800 dark:text-stone-100 tracking-tighter font-headline">Stética Agendamentos</span>
+<span class="hidden md:inline text-[10px] uppercase tracking-widest font-semibold text-primary px-2 py-0.5 bg-primary-container/20 rounded-full">Admin Shell</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center text-sm font-label">
+<a class="text-orange-300 dark:text-orange-200 font-bold hover:opacity-80 transition-opacity" href="#">Visão Geral</a>
+<a class="text-stone-400 dark:text-stone-500 hover:opacity-80 transition-opacity" href="#">Relatórios</a>
+<a class="text-stone-400 dark:text-stone-500 hover:opacity-80 transition-opacity" href="#">Configurações</a>
+</div>
+<span class="material-symbols-outlined text-stone-800 dark:text-stone-100 hover:opacity-80 transition-opacity cursor-pointer">settings</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Welcome Header - Editorial Style -->
+<section class="mb-16">
+<p class="text-xs uppercase tracking-[0.2em] font-semibold text-primary mb-2 opacity-80">Dashboard Central</p>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface leading-none mb-4">
+                Olá, Admin. <span class="text-primary-container italic font-normal">Sua clínica hoje.</span>
+</h1>
+<div class="h-1 w-24 rose-gold-gradient rounded-full"></div>
+</section>
+<!-- Bento Grid Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<!-- Faturamento do Dia -->
+<div class="md:col-span-2 bg-surface-container-lowest custom-shadow p-8 rounded-xl border-l-4 border-primary-container flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs uppercase tracking-widest font-bold text-on-surface-variant/60">Faturamento do Dia</span>
+<div class="p-2 bg-primary-container/10 rounded-full">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+</div>
+<h2 class="text-4xl font-headline font-bold text-on-surface">R$ 4.280,00</h2>
+<p class="text-sm text-green-600 font-semibold mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +12% em relação a ontem
+                    </p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Projeção Mensal: R$ 85.000</span>
+</div>
+</div>
+<!-- Agendamentos Confirmados -->
+<div class="bg-surface-container-lowest custom-shadow p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs uppercase tracking-widest font-bold text-on-surface-variant/60">Confirmados</span>
+<div class="p-2 bg-stone-100 rounded-full">
+<span class="material-symbols-outlined text-stone-500">event_available</span>
+</div>
+</div>
+<h2 class="text-4xl font-headline font-bold text-on-surface">18</h2>
+<p class="text-xs text-on-surface-variant mt-2">De um total de 22 agendados</p>
+</div>
+<div class="mt-4 w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[81%]"></div>
+</div>
+</div>
+<!-- Faltas -->
+<div class="bg-surface-container-lowest custom-shadow p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs uppercase tracking-widest font-bold text-on-surface-variant/60">Faltas</span>
+<div class="p-2 bg-error-container/10 rounded-full">
+<span class="material-symbols-outlined text-error">person_off</span>
+</div>
+</div>
+<h2 class="text-4xl font-headline font-bold text-error">02</h2>
+<p class="text-xs text-on-surface-variant mt-2">9% taxa de ausência hoje</p>
+</div>
+<button class="text-[10px] text-error font-bold uppercase tracking-widest hover:underline text-left">Contatar Clientes</button>
+</div>
+</div>
+<!-- Second Section: Alerts & Activity -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+<!-- Stock Alerts - Asymmetric Card -->
+<div class="lg:col-span-2">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Alertas de Estoque</h3>
+<button class="text-sm font-semibold text-primary underline underline-offset-4">Ver Inventário Completo</button>
+</div>
+<div class="space-y-4">
+<!-- Low Stock Item -->
+<div class="group bg-surface-container-low/50 hover:bg-surface-container-lowest transition-all p-5 rounded-xl flex items-center justify-between border-l-2 border-transparent hover:border-primary-container">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="close up of premium beauty serum bottle on a clean minimalist shelf with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9c2u1OkF8GB01QhVgl4JLpOi5mnvdG15sO20E8Sj6FP8h2PYcqVWMfleEB8h1rhRYA4lLzpBCGxBiRSOxF-XEHWbcYCg7t7ldqR407NCISU12QHxidZUXRCIX8E3I3c1YOAd0SLKUosO3eZJ_Rzy1EgLIdwiG0jc9eU6bK-SIxVKokPBOnPyYwr7jNj25LQ-rE7maP_mr2OqyV-lEkokrQ57aaxIo46KCWNpPKRM_5jmNV2Ip0XDwwC1TN_7icll4AGm3uopzoHS3"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface text-sm">Ácido Hialurônico 50ml</h4>
+<p class="text-xs text-on-surface-variant">Linha Premium Platinum</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-error uppercase block mb-1">Crítico</span>
+<span class="text-xs text-on-surface-variant">02 unidades restantes</span>
+</div>
+</div>
+<!-- Medium Stock Item -->
+<div class="group bg-surface-container-low/50 hover:bg-surface-container-lowest transition-all p-5 rounded-xl flex items-center justify-between border-l-2 border-transparent hover:border-primary-container">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="professional cosmetic products organized on a tray aesthetic clinic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmTlu37ZVan5px_Jac5h3Vl2sqP-6OrVSl7hUXHe2BWqdEKhJVulfwn7YePlmkMrPRf1WwmxSfb53Efg2mfmIJeul3S-N2BStgMeQMMc1qd180qPNVGBGtNUiIhhV_YWvjpB-f6OPJKyZlrdadfZc3MJRRbeVyYsJEpHmVW4kd3LabkVrav1xIHaLjcPVOEjoXdWFGVwQFTYmsG3ZG38JZsWvi9dl7CQaT5NAY8kD9kemZs80_2x3v0gj65r4uoYrwnZiQo-Dw306B"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface text-sm">Kit Luvas de Nitrilo (M)</h4>
+<p class="text-xs text-on-surface-variant">Descartáveis Hospitalares</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-xs font-bold text-orange-400 uppercase block mb-1">Baixo</span>
+<span class="text-xs text-on-surface-variant">15 unidades restantes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Quick Actions / Stats -->
+<div class="bg-stone-900 text-white p-8 rounded-[2rem] relative overflow-hidden">
+<!-- Visual Texture Decor -->
+<div class="absolute top-0 right-0 w-32 h-32 rose-gold-gradient rounded-bl-full opacity-20 -mr-16 -mt-16"></div>
+<h3 class="font-headline text-xl font-bold mb-8 relative z-10">Próximos VIPs</h3>
+<div class="space-y-6 relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="portrait of a sophisticated middle aged woman smiling gently with natural skin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5q2-u6QdPVUbYe8RvnMJ38_pytPBpu3hdBahro3Wk7L49naJMLyrAJ6jBGjmUk86KRk8A3tegYZLXzLX0KycV2CbDlUuarxnq0EWajY8mfc7LlMuh6iptbTkvxGppkRvSQ-OHKPwT6Sueidpc8vbWHokWhBBJnF4D_GJ4R9hDiHz80VSU44PEjgWZHbVxT05kqErK6O6wlPp3SuCkSuJXhy7fCXy_XBdPLAtcLikMH1i9-oYQ6IfyYcjDrz4z1AbHWPgG19IW1-v5"/>
+</div>
+<div>
+<p class="text-sm font-bold">Helena Mendes</p>
+<p class="text-[10px] text-stone-400 uppercase tracking-widest">Protocolo Facial • 14:30</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-60">
+<div class="w-10 h-10 rounded-full border border-stone-700 p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="headshot of a stylish professional man in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBileCyKKKnQS-wbROfSnvTn78ZiWAb_iyKbjc7xMfU-cvW-2-jmoWOHyTqg_REmc-_Y7fXCOfWy5H4-D76Oxj0ZUZ78lO9iUiKHqHl3kgXPkXKE_hTcc_DpJGEsNbXeabQ5ROUua9dt9Pte8Ha9gOLlYA8sbjxNbuCBImB9pbTUL1neklcllF2I2cD1SfWcLvKrAuX17dqejOLpg7vpCoXKA1DHRj85lyXGUcRD4CgQkYA0QjL8YNgxkjz6_ZpCfGLzicTstOys_Px"/>
+</div>
+<div>
+<p class="text-sm font-bold">Ricardo Santos</p>
+<p class="text-[10px] text-stone-400 uppercase tracking-widest">Botox Full Face • 16:00</p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10">
+<button class="w-full py-4 rounded-full rose-gold-gradient text-white font-bold text-sm tracking-widest uppercase hover:opacity-90 transition-opacity">
+                        Novo Agendamento
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-stone-900/90 backdrop-blur-2xl z-50 rounded-t-[2rem] shadow-[0_-12px_40px_rgba(122,86,66,0.06)]">
+<!-- Active Tab: Inicio -->
+<a class="flex flex-col items-center justify-center bg-orange-100/50 dark:bg-orange-900/30 text-orange-400 dark:text-orange-200 rounded-full px-5 py-2 scale-90 active:duration-200 transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 scale-90 active:duration-200 hover:text-orange-300 dark:hover:text-orange-100 transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Agenda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 scale-90 active:duration-200 hover:text-orange-300 dark:hover:text-orange-100 transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Clientes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 scale-90 active:duration-200 hover:text-orange-300 dark:hover:text-orange-100 transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Finanças</span>
+</a>
+</nav>
+</body></html>

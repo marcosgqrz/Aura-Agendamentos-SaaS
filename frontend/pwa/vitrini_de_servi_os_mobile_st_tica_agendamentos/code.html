@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#785744",
+              "surface-container-highest": "#e2e2e2",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#603f2d",
+              "on-secondary-fixed-variant": "#464747",
+              "on-primary-fixed": "#2e1506",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#1a1c1c",
+              "tertiary-fixed-dim": "#e8bea6",
+              "tertiary-container": "#d8af97",
+              "surface-bright": "#f9f9f9",
+              "surface-tint": "#7a5642",
+              "surface-dim": "#dadada",
+              "primary-container": "#dcae96",
+              "secondary-fixed": "#e3e2e2",
+              "surface-variant": "#e2e2e2",
+              "outline": "#82746d",
+              "on-surface-variant": "#50443e",
+              "on-surface": "#1a1c1c",
+              "inverse-on-surface": "#f0f1f1",
+              "inverse-primary": "#ecbda4",
+              "on-tertiary-fixed": "#2c1607",
+              "on-primary-container": "#62412e",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#ffdbca",
+              "inverse-surface": "#2f3131",
+              "primary": "#7a5642",
+              "on-secondary-container": "#626363",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#c7c6c6",
+              "on-tertiary-fixed-variant": "#5e402e",
+              "secondary-container": "#e0dfdf",
+              "on-background": "#1a1c1c",
+              "outline-variant": "#d4c3bb",
+              "on-tertiary": "#ffffff",
+              "background": "#f9f9f9",
+              "surface": "#f9f9f9",
+              "tertiary-fixed": "#ffdbc8",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f3f3f3",
+              "secondary": "#5e5e5f",
+              "on-tertiary-container": "#5f422f",
+              "primary-fixed-dim": "#ecbda4"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .rose-gold-gradient {
+        background: linear-gradient(45deg, #7a5642, #dcae96);
+      }
+      .subtle-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.05;
+        pointer-events: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen">
+<!-- Top Navigation Shell -->
+<header class="bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#7a5642]">menu</span>
+<span class="font-['Epilogue'] tracking-[0.2em] text-xl font-bold text-[#4F4F4F] dark:text-stone-200">VITRINI</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="Clinic brand logo or elegant aesthetic portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyBh8fFktPrRXtqN1oUZOqGmd6CLeHItMOGAZYNPWs9tbsm5VdQteLfCuMImXu7JP0-GwOVFoYJmuyYOnrnIbdQH3B8J6USDcD-OQvoGBSG9U67mKAYdmsf3UVzHMVaselos7v7Qvq0PtMvp6GdEXroLqiurggB84r0wAyG8L5xz-sDddLBM7iwW-9AcXp_hHY-5oailLmkarPaOqYwVepphh1S3hZXjo9emLXnQ1MEaITTYQ7cnRxnAzv-Lme5Vt_sSpPtCunnLh_"/>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-32">
+<!-- Hero Section -->
+<section class="relative h-[397px] w-full overflow-hidden mb-12">
+<img class="w-full h-full object-cover" data-alt="Luxurious spa interior with soft warm lighting, white towels, and clinical yet warm aesthetic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATDAQ8TslLTtAsFRFBSoa7rKXeHrn0vIcpBfW8j8-08DfYB9ZcmITcV3mBGoAiIlxGvmkUOwqUww4Mrj2nER48uKrr-EEY4jEmwQBlPm6oXxBz6JVuNq-1dVlsg9kP1Yef5cMpzQYa9pnYbKNcV74lh3se79cpDI8lPkwCP-rWCY6l8x2eiZfN-2UQZYKgfz6zJMEifx5-0m4ACNdBqHKWTQgCV_EZbRUNXxU_IdbLNDqFT9YP_y3LPS5jLi5mDuc5nInvc9UoyYsH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-10 left-6 right-6">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-2">Exclusive Care</p>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-none max-w-xs">
+                    Stética Agendamentos
+                </h1>
+<p class="font-body text-sm text-on-surface-variant mt-4 max-w-md">
+                    Transforming self-care into a premium clinical experience through specialized aesthetic treatments.
+                </p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-6 space-y-12">
+<div class="flex items-baseline justify-between border-b border-outline-variant/10 pb-4">
+<h2 class="font-headline text-2xl font-bold">Vitrini de Serviços</h2>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">9 Opções</span>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<!-- Service: Drenagem Linfática -->
+<div class="group flex flex-col gap-4">
+<div class="relative overflow-hidden aspect-[16/9] rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional lymphatic drainage massage performed on a client in a serene clinic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJs7SHM34OPBi6u29gmor9ES0FLJFzVEHSMrjvFLG2YW-CkZIOXO6bFOjUcm9KULpWldzspeQuiz196ROV8zGm3D344uuK-odp2Oo2fvQIc1_5ArsN6ofWlZzS9GHP4cVqkT0RdYc7syvVEZP0skPBAH9aiTEdu3rii-Rn3IE0Vtbo3Vr0wCEvaI_UyiS1n-QcPRVdV9Q_phQxAUzFuPsgwuLvxm48x9i8WT4Lg2yY_-Wh-lyPHJHqn_jPU2Vwb8YRvLYcxGd6x8l"/>
+<div class="absolute top-4 left-4">
+<span class="rose-gold-gradient text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg">Special</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h3 class="font-headline text-xl font-semibold">Drenagem Linfática</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Reducing fluid retention and improving circulation.</p>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold text-primary">R$ 100,00</p>
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-tighter">60 min</p>
+</div>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-bold rounded-full hover:opacity-90 active:scale-95 transition-all uppercase tracking-widest text-xs">Agendar Agora</button>
+</div>
+<!-- Service: Limpeza de Pele -->
+<div class="group flex flex-col gap-4">
+<div class="relative overflow-hidden aspect-[16/9] rounded-xl bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detailed facial cleansing treatment showing aesthetician tools and soft skin texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_q3Xvy0tT9mRKmNa8bQZY-LGHl8ATE4wdnvVti8kI43pxVIMWVM4gT9FeQ7WGdAMPWPzYpMlDDkowjRRQ_m5egynFmSFGAOiWsGwkHA-kWtQHScEMaGtZYwSNJk2ubT0suK8PSEIaIEubGHPzqKaTm8fxmr6UB4xNz5FEpAGzKsX5RoQL2n_1_QYl3lGn9sBTVI-q6Ae4ctiObBYcdSxjNtd6BfULHrUnnxSWQJ79FJoZyAnWINwoKujo2xcWq1kPSsgRbuEf5I6S"/>
+<div class="absolute top-4 left-4">
+<span class="rose-gold-gradient text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest shadow-lg">Premium</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<h3 class="font-headline text-xl font-semibold">Limpeza de Pele</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Deep pore extraction and skin revitalization.</p>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold text-primary">R$ 100,00</p>
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-tighter">90 min</p>
+</div>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-bold rounded-full hover:opacity-90 active:scale-95 transition-all uppercase tracking-widest text-xs">Agendar Agora</button>
+</div>
+<!-- Secondary Grid for lower-tier services -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+<!-- Massagem Relaxante -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Massagem Relaxante</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Complete stress relief.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 100,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Ventosaterapia -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Ventosaterapia</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Suction therapy for muscle tension.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 100,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Hidra Gloss -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div class="flex justify-between">
+<h4 class="font-headline font-bold text-lg mb-1">Hidra Gloss</h4>
+<span class="rose-gold-gradient text-white text-[8px] px-2 h-5 flex items-center rounded-full font-bold uppercase tracking-tighter">Hot</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-6">Intense lip hydration and volume.</p>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 90,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Brow Lamination -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Brow Lamination</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Fuller, more defined eyebrows.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 60,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Lash Lifting -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Lash Lifting</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Natural eyelash curling.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 60,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Spa dos Pés -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Spa dos Pés</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Exfoliation and relaxation for tired feet.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 50,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Designer de Sobrancelhas -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_40px_rgba(122,86,66,0.04)] flex flex-col justify-between border-l-4 border-primary-container">
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Designer de Sobrancelhas</h4>
+<p class="font-body text-sm text-on-surface-variant mb-6">Precision facial mapping and shaping.</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-headline font-bold text-primary text-xl">R$ 25,00</span>
+<button class="bg-surface-container-highest p-3 rounded-full hover:bg-primary-container transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-white">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl z-50 rounded-t-[2rem] shadow-[0_-12px_40px_rgba(122,86,66,0.06)] h-20">
+<a class="flex flex-col items-center justify-center bg-[#dcae96] text-white rounded-full w-12 h-12 mb-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest hidden">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 hover:text-[#7a5642]" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest mt-1">Pricing</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 hover:text-[#7a5642]" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest mt-1">Book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 hover:text-[#7a5642]" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-['Manrope'] text-[8px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+<!-- Decorative elements -->
+<div class="fixed top-0 right-0 p-8 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px] text-primary rotate-12" style="font-variation-settings: 'wght' 100;">spa</span>
+</div>
+</body></html>

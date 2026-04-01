@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agendamento - Stética</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#5e5e5f",
+                        "inverse-primary": "#ecbda4",
+                        "on-tertiary-fixed": "#2c1607",
+                        "surface": "#f9f9f9",
+                        "primary-container": "#dcae96",
+                        "on-surface": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed": "#e3e2e2",
+                        "primary": "#7a5642",
+                        "on-background": "#1a1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#5f422f",
+                        "on-primary-container": "#62412e",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#785744",
+                        "primary-fixed-dim": "#ecbda4",
+                        "background": "#f9f9f9",
+                        "primary-fixed": "#ffdbca",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#50443e",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#ffdbc8",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline-variant": "#d4c3bb",
+                        "on-tertiary-fixed-variant": "#5e402e",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "outline": "#82746d",
+                        "on-primary-fixed-variant": "#603f2d",
+                        "secondary-container": "#e0dfdf",
+                        "surface-container": "#eeeeee",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-dim": "#dadada",
+                        "surface-bright": "#f9f9f9",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#e8bea6",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-container": "#d8af97",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-tint": "#7a5642",
+                        "on-secondary-container": "#626363",
+                        "on-primary-fixed": "#2e1506"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-border {
+            border: 2px solid transparent;
+            background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(45deg, #7a5642, #dcae96);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        .rose-gold-gradient {
+            background: linear-gradient(45deg, #7a5642, #dcae96);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-md mx-auto">
+<button class="text-[#7a5642] hover:opacity-70 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Epilogue'] font-bold text-lg tracking-tight text-[#7a5642]">Agendamento</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="pt-20 pb-32 max-w-md mx-auto px-6 space-y-10">
+<!-- Step 1: Seleção de Serviço -->
+<section class="animate-fade-in">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-widest font-semibold text-primary mb-1 block">Passo 01</span>
+<h2 class="font-headline text-2xl font-extrabold text-on-surface leading-tight">Escolha o seu Tratamento</h2>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Premium Service Card -->
+<div class="premium-border rounded-full p-1 shadow-[0_-12px_40px_rgba(122,86,66,0.06)] bg-surface-container-lowest">
+<div class="flex items-center justify-between px-5 py-3">
+<div class="flex items-center gap-4">
+<div class="rose-gold-gradient w-12 h-12 rounded-full flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">face</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Harmonização Facial</h3>
+<p class="text-xs text-on-surface-variant">60 min • Premium</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-primary">R$ 1.200</span>
+</div>
+</div>
+</div>
+<!-- Regular Service Card -->
+<div class="bg-surface-container-lowest rounded-full p-1 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex items-center justify-between px-5 py-3">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low w-12 h-12 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Limpeza de Pele Profunda</h3>
+<p class="text-xs text-on-surface-variant">90 min • Estética</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-on-surface">R$ 280</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-full p-1 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex items-center justify-between px-5 py-3">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low w-12 h-12 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">content_cut</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Design de Sobrancelhas</h3>
+<p class="text-xs text-on-surface-variant">45 min • Express</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-on-surface">R$ 120</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Seleção de Profissional -->
+<section class="animate-fade-in">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-widest font-semibold text-primary mb-1 block">Passo 02</span>
+<h2 class="font-headline text-2xl font-extrabold text-on-surface leading-tight">Com quem deseja agendar?</h2>
+</div>
+<div class="flex overflow-x-auto pb-4 gap-6 no-scrollbar">
+<!-- Professional 1 (Featured) -->
+<div class="flex-shrink-0 w-44">
+<div class="relative group">
+<div class="aspect-[3/4] rounded-full overflow-hidden mb-3 border-2 border-primary-container/30">
+<img alt="Profissional Dra. Marina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="portrait of a confident female dermatologist in a white clinical coat smiling in a bright modern luxury spa office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUpBNN0DH5ByW4h5ljeO6biMApd3p-zRvjOmQDd1FPB1mIn92A3dTudXPB1HSSNiSjwYaUHkL6SseLKQGlP9WShfmRGbBo38nz7kxMcQuiEkFeEMHQ9ktcVM-whI17InPxsOlc-hhf1RA6IoL7i3jCvDZWytg6R7Cl6BL6nlCWbtLpRZeZiMEOkH3He3CNdyQYKdDGkPovdjVykkRBtEqHji7BERLbSYkiGI9Lp_fE9Kh1MxyroYc3W54-aWa4Uf8HnG4RbMyscksu"/>
+</div>
+<div class="absolute top-4 right-4 rose-gold-gradient w-8 h-8 rounded-full flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-center">Dra. Marina Costa</h3>
+<p class="text-[10px] text-center font-label uppercase tracking-widest text-on-surface-variant mt-1">Especialista Facial</p>
+</div>
+<!-- Professional 2 -->
+<div class="flex-shrink-0 w-44">
+<div class="relative group">
+<div class="aspect-[3/4] rounded-full overflow-hidden mb-3 bg-surface-container-low">
+<img alt="Profissional Dr. Ricardo" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" data-alt="headshot of a professional male medical aesthetician in clean scrubs looking friendly in a bright clinical setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9NgJRVdutJLXP9AcYgsNBdh5MbNZOPQpHE2Ju3dBmN3pECnVZOOmf8ZJEVWz2XirIfkmjdLT8RYUD0i6O6f2EsaoZQl3yqqnKktWMn4pqB3Ih6RqtWOrrzVYeYPSf5U3PeTM7jibclDbUMyKLnQrVs8Kuv0tXeglcCGUVh79za-y5gzFamWMq-jFAe7cRSR5VPYduP1WoMKveNK1DT6YMVNptP8tl9Bvc-02BpKQDELi-6MkM2xMQ529AFIlDTD0zP6HNjWUdQNGm"/>
+</div>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-center opacity-70">Dr. Ricardo Silva</h3>
+<p class="text-[10px] text-center font-label uppercase tracking-widest text-on-surface-variant mt-1 opacity-70">Dermatologista</p>
+</div>
+<!-- Professional 3 -->
+<div class="flex-shrink-0 w-44">
+<div class="relative group">
+<div class="aspect-[3/4] rounded-full overflow-hidden mb-3 bg-surface-container-low">
+<img alt="Profissional Dra. Helena" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110" data-alt="professional female doctor with warm smile standing in a high-end beauty clinic hall way with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCauMq_OpCZzxjlHgNTfRbEQvtncJVROS3Vz7IUjgncGQXxwlu49NBAQpeDbNSgpk8R7YCKD5tHJ9eIhgemptYJgL56S_y5apdc3OEPe3ubUK0DGAzwIUsUBxRR649rqztOtmkzpBTazPKO71ZMBENGG-3uPeXDgKWF2-cqm23lfz0UlWx_gY9MTOdil8xERv5zKbcz1N6c2gcl60UwRg5ly3OmM8RFDPg_IgDW486vOlCfTfi1-fghPCI7iMEVPXnk4Zp-LC64Tboj"/>
+</div>
+</div>
+<h3 class="font-headline font-bold text-on-surface text-center opacity-70">Dra. Helena Vaz</h3>
+<p class="text-[10px] text-center font-label uppercase tracking-widest text-on-surface-variant mt-1 opacity-70">Biomédica</p>
+</div>
+</div>
+</section>
+<!-- Step 3: Seleção de Data/Hora -->
+<section class="animate-fade-in">
+<div class="mb-6">
+<span class="font-label text-[10px] uppercase tracking-widest font-semibold text-primary mb-1 block">Passo 03</span>
+<h2 class="font-headline text-2xl font-extrabold text-on-surface leading-tight">Quando deseja vir?</h2>
+</div>
+<!-- Modern Mini Calendar -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-[0_-12px_40px_rgba(122,86,66,0.06)] mb-8">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline font-bold text-primary">Novembro, 2024</h4>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-4 text-center">
+<span class="text-[10px] font-bold text-stone-400">D</span>
+<span class="text-[10px] font-bold text-stone-400">S</span>
+<span class="text-[10px] font-bold text-stone-400">T</span>
+<span class="text-[10px] font-bold text-stone-400">Q</span>
+<span class="text-[10px] font-bold text-stone-400">Q</span>
+<span class="text-[10px] font-bold text-stone-400">S</span>
+<span class="text-[10px] font-bold text-stone-400">S</span>
+<!-- Calendar Days -->
+<span class="text-sm font-semibold opacity-30">12</span>
+<span class="text-sm font-semibold opacity-30">13</span>
+<span class="text-sm font-semibold text-on-surface">14</span>
+<div class="relative flex flex-col items-center">
+<span class="text-sm font-bold text-white bg-primary-container w-8 h-8 flex items-center justify-center rounded-full z-10">15</span>
+<div class="absolute -bottom-1 w-1 h-1 bg-primary rounded-full"></div>
+</div>
+<span class="text-sm font-semibold text-on-surface">16</span>
+<span class="text-sm font-semibold text-on-surface">17</span>
+<span class="text-sm font-semibold text-on-surface">18</span>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 px-4 bg-surface-container-low rounded-full text-sm font-bold text-on-surface-variant hover:bg-primary-container hover:text-white transition-all active:scale-95">09:00</button>
+<button class="py-3 px-4 bg-primary-container rounded-full text-sm font-bold text-white shadow-lg active:scale-95">10:30</button>
+<button class="py-3 px-4 bg-surface-container-low rounded-full text-sm font-bold text-on-surface-variant hover:bg-primary-container hover:text-white transition-all active:scale-95">13:00</button>
+<button class="py-3 px-4 bg-surface-container-low rounded-full text-sm font-bold text-on-surface-variant hover:bg-primary-container hover:text-white transition-all active:scale-95">14:30</button>
+<button class="py-3 px-4 bg-surface-container-low rounded-full text-sm font-bold text-on-surface-variant hover:bg-primary-container hover:text-white transition-all active:scale-95">16:00</button>
+<button class="py-3 px-4 bg-surface-container-low rounded-full text-sm font-bold text-on-surface-variant hover:bg-primary-container hover:text-white transition-all active:scale-95">17:30</button>
+</div>
+</section>
+<!-- Final Button -->
+<div class="fixed bottom-24 left-0 w-full px-6 max-w-md mx-auto z-40">
+<button class="w-full bg-[#dcae96] text-on-primary-container font-headline font-bold text-lg py-5 rounded-full shadow-[0_20px_50px_rgba(122,86,66,0.2)] hover:opacity-90 active:scale-95 transition-all">
+                Confirmar Agendamento
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-2xl rounded-t-[2rem] z-50 border-t border-stone-100/20 shadow-[0_-12px_40px_rgba(122,86,66,0.06)] flex justify-around items-center px-6 pb-6 pt-2">
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:text-[#7a5642] transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:text-[#7a5642] transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#dcae96] text-white rounded-full p-3 active:scale-90 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_available</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Agendados</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 p-3 hover:text-[#7a5642] transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] uppercase tracking-widest font-semibold mt-1">Perfil</span>
+</a>
+</nav>
+<style>
+        /* Custom styles for components and animations */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+</body></html>

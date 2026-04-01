@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#d4c3bb",
+              "surface-dim": "#dadada",
+              "outline": "#82746d",
+              "error": "#ba1a1a",
+              "primary-fixed": "#ffdbca",
+              "on-surface-variant": "#50443e",
+              "on-primary-container": "#62412e",
+              "on-tertiary-fixed-variant": "#5e402e",
+              "secondary-fixed-dim": "#c7c6c6",
+              "on-secondary-fixed-variant": "#464747",
+              "secondary": "#5e5e5f",
+              "on-background": "#1a1c1c",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#603f2d",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-primary": "#ecbda4",
+              "surface-bright": "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "primary-fixed-dim": "#ecbda4",
+              "primary": "#7a5642",
+              "surface-container": "#eeeeee",
+              "tertiary-fixed-dim": "#e8bea6",
+              "on-tertiary": "#ffffff",
+              "on-secondary-container": "#626363",
+              "on-primary-fixed": "#2e1506",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-container-highest": "#e2e2e2",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-variant": "#e2e2e2",
+              "primary-container": "#dcae96",
+              "error-container": "#ffdad6",
+              "on-surface": "#1a1c1c",
+              "on-primary": "#ffffff",
+              "tertiary": "#785744",
+              "surface-container-low": "#f3f3f3",
+              "surface": "#f9f9f9",
+              "on-tertiary-container": "#5f422f",
+              "background": "#f9f9f9",
+              "on-tertiary-fixed": "#2c1607",
+              "tertiary-fixed": "#ffdbc8",
+              "surface-container-high": "#e8e8e8",
+              "tertiary-container": "#d8af97",
+              "secondary-fixed": "#e3e2e2",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#7a5642",
+              "secondary-container": "#e0dfdf"
+            },
+            fontFamily: {
+              "headline": ["Epilogue"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .rose-gold-gradient {
+        background: linear-gradient(45deg, #7a5642, #dcae96);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(249, 249, 249, 0.8);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface-variant min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 dark:bg-stone-950/80 backdrop-blur-xl flex items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#7a5642] dark:text-[#dcae96] cursor-pointer active:scale-95 duration-200">arrow_back</span>
+<h1 class="font-['Epilogue'] font-bold tracking-tight text-lg text-[#7a5642] dark:text-[#dcae96]">Notificações</h1>
+</div>
+</header>
+<main class="pt-20 px-6 space-y-6">
+<!-- Editorial Header Section -->
+<div class="py-4">
+<span class="font-label text-[10px] uppercase tracking-[0.15em] text-outline mb-1 block">Centro de Alertas</span>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface leading-tight tracking-tighter">Fique por dentro das novidades.</h2>
+</div>
+<!-- Notifications List -->
+<div class="space-y-4">
+<!-- Category: Today -->
+<div class="pt-2">
+<p class="font-label text-[11px] font-bold text-primary uppercase tracking-widest mb-4">Hoje</p>
+<!-- Notification Card: Novo Agendamento -->
+<div class="bg-surface-container-lowest rounded-xl p-5 flex gap-4 shadow-[0_12px_40px_rgba(122,86,66,0.04)] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="w-12 h-12 rounded-full rose-gold-gradient flex items-center justify-center flex-shrink-0 text-white shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_add_on</span>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-headline text-sm font-bold text-on-surface tracking-tight">Novo Agendamento</h3>
+<p class="text-xs leading-relaxed mt-1">Sua sessão de Limpeza de Pele foi confirmada para amanhã às 14:00.</p>
+<span class="text-[10px] text-outline mt-2 font-medium">10:45 AM</span>
+</div>
+</div>
+</div>
+<!-- Notification Card: Promoção VIP (Gradient Border Style) -->
+<div class="bg-surface-container-lowest rounded-xl p-5 flex gap-4 shadow-[0_12px_40px_rgba(122,86,66,0.06)] relative overflow-hidden">
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwM_1iK3Re-ZyHMTJpliu0jxKIFlWsk-uQMN0JXeFVppdN8EfsxvEqOFrdq_JhHB_839E9EeezN2vmvcyuslFKlqvU3ljvRn07GSkOCN8rhu1zSgfClHN2Co4WGTVK7BnCssxOvWkPGe-1PwdzrVMNcAuuSAtyEO1wmmTbrQC8SrlECQMP2_AdnZbKEzwRhQ6smkKvpyVg5qKRyaPmHNNMTODE7gCk90eBYQSLElUPRrJm4xH8R1xWDQNPHgAK3unQCserprXru2wv');"></div>
+<div class="w-12 h-12 rounded-full border-2 border-primary-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<h3 class="font-headline text-sm font-bold text-on-surface tracking-tight">Promoção VIP</h3>
+<span class="bg-primary-container text-on-primary-container text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Exclusivo</span>
+</div>
+<p class="text-xs leading-relaxed mt-1">Desconto especial de 20% em procedimentos de Harmonização Facial esta semana.</p>
+<span class="text-[10px] text-outline mt-2 font-medium">08:30 AM</span>
+</div>
+</div>
+<!-- Category: Earlier -->
+<div class="pt-4">
+<p class="font-label text-[11px] font-bold text-outline uppercase tracking-widest mb-4">Ontem</p>
+<!-- Notification Card: Lembrete de Consulta -->
+<div class="bg-surface-container-low rounded-xl p-5 flex gap-4 relative overflow-hidden transition-all duration-300">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined">alarm</span>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-headline text-sm font-bold text-on-surface-variant tracking-tight">Lembrete de Consulta</h3>
+<p class="text-xs leading-relaxed mt-1">Faltam 2 horas para seu procedimento com a Dra. Mariana.</p>
+<span class="text-[10px] text-outline mt-2 font-medium">15:00 PM</span>
+</div>
+</div>
+<!-- Notification Card: Alerta de Estoque -->
+<div class="mt-4 bg-surface-container-low rounded-xl p-5 flex gap-4 relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-error-container/30 flex items-center justify-center flex-shrink-0 text-error">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-headline text-sm font-bold text-on-surface-variant tracking-tight">Alerta de Estoque</h3>
+<p class="text-xs leading-relaxed mt-1">O seu Sérum Vitamina C favorito está quase acabando. Reserve o seu!</p>
+<span class="text-[10px] text-outline mt-2 font-medium">11:20 AM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Banner -->
+<div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mt-8 group">
+<img alt="Promoção do Mês" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of luxurious aesthetic clinic treatment room with minimalist white furniture and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1c4jOWqD4Afsqf6ZM59ZPo1emw-7uxyPU87a4468MJumO2Wfp8coaJwGLI8AJk-uyDhbkiNhUIoVBUGxVXNlSZZPpzQnibuGBzQ3anBgdm7pNtsBGVXrAN8d0DgvdbhrHXaf_6xDx2NN4_OR8s0Amf1yMNA360cbcgwPsMWGkl6fslHU6eJ56s1dCzXtLpIL-m-fAo_hHRPqbZUEYTpteAPgLghcn-xHMML3JBtYNXQYIZ9OVgsvEhNel8RQU5kD6CSGPDKM0El2W"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<span class="text-white/80 font-label text-[10px] uppercase tracking-widest mb-2">Novidades da Clínica</span>
+<h4 class="font-headline text-xl font-bold text-white leading-tight">Novo Protocolo de Rejuvenescimento Estrela</h4>
+<button class="mt-4 bg-white text-primary px-4 py-2 rounded-full font-label text-[11px] font-bold w-fit uppercase active:scale-95 transition-all">Ver Detalhes</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe bg-[#ffffff]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-12px_40px_rgba(122,86,66,0.06)] rounded-t-3xl z-50">
+<div class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 px-5 py-2 hover:text-[#7a5642] dark:hover:text-[#dcae96] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider">Início</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 px-5 py-2 hover:text-[#7a5642] dark:hover:text-[#dcae96] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider">Agenda</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#dcae96] dark:bg-[#7a5642] text-white rounded-full px-5 py-2 active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider">Alertas</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#50443e] dark:text-stone-400 px-5 py-2 hover:text-[#7a5642] dark:hover:text-[#dcae96] transition-colors active:scale-90 duration-300 cursor-pointer">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Manrope'] font-medium text-[11px] uppercase tracking-wider">Perfil</span>
+</div>
+</nav>
+</body></html>
